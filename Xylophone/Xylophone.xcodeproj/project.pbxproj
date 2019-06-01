@@ -19,7 +19,6 @@
 		63C019F31C58E4AD001F4187 /* note5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 63C019EC1C58E4AD001F4187 /* note5.wav */; };
 		63C019F41C58E4AD001F4187 /* note6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 63C019ED1C58E4AD001F4187 /* note6.wav */; };
 		63C019F51C58E4AD001F4187 /* note7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 63C019EE1C58E4AD001F4187 /* note7.wav */; };
-		AD6F1CCA20EBCF7200198C34 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD6F1CC920EBCF7200198C34 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		63C019EC1C58E4AD001F4187 /* note5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note5.wav; sourceTree = "<group>"; };
 		63C019ED1C58E4AD001F4187 /* note6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note6.wav; sourceTree = "<group>"; };
 		63C019EE1C58E4AD001F4187 /* note7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note7.wav; sourceTree = "<group>"; };
-		AD6F1CC920EBCF7200198C34 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +66,6 @@
 		63C019BC1C58DF76001F4187 = {
 			isa = PBXGroup;
 			children = (
-				AD6F1CC920EBCF7200198C34 /* README.md */,
 				63C019C71C58DF76001F4187 /* Xylophone */,
 				63C019C61C58DF76001F4187 /* Products */,
 			);
@@ -165,7 +162,6 @@
 				63C019F51C58E4AD001F4187 /* note7.wav in Resources */,
 				63C019D31C58DF76001F4187 /* LaunchScreen.storyboard in Resources */,
 				63C019D01C58DF76001F4187 /* Assets.xcassets in Resources */,
-				AD6F1CCA20EBCF7200198C34 /* README.md in Resources */,
 				63C019CE1C58DF76001F4187 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
