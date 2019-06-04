@@ -22,7 +22,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottomButton: UIButton!
     @IBOutlet weak var storyTextView: UILabel!
     @IBOutlet weak var imageBackground: UIImageView!
-    
+    @IBOutlet weak var restartButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -30,7 +31,7 @@ class ViewController: UIViewController {
 
     // User presses one of the buttons
     @IBAction func buttonPressed(_ sender: UIButton) {
-        
+        print(sender.tag)
         if sender.tag == 1 {
             switch page {
             case 0:
@@ -53,15 +54,26 @@ class ViewController: UIViewController {
             default:
                 print("illegal option")
             }
+        } else if sender.tag == 3 {
+            nextPage = 0
         }
         nextChapter()
         updateUI()
     }
+    @IBOutlet weak var restartButton2: UIButton!
     
     func updateUI() {
         storyTextView.text = allPages.pageList[page].pageText
-        topButton.setTitle(allPages.pageList[page].pageOptions[0], for: .normal)
-        bottomButton.setTitle(allPages.pageList[page].pageOptions[1], for: .normal)
+        
+        if allPages.pageList[page].pageOptions.count < 2 {
+            showHideOptionButtons(option: "hide")
+        } else {
+           
+            showHideOptionButtons(option: "show")
+            topButton.setTitle(allPages.pageList[page].pageOptions[0], for: .normal)
+            bottomButton.setTitle(allPages.pageList[page].pageOptions[1], for: .normal)
+        }
+        
         if page > 2 {
             imageBackground.image = UIImage.init(named: imageOptions[0])
             storyTextView.textColor = UIColor.black
@@ -71,6 +83,22 @@ class ViewController: UIViewController {
     func nextChapter() {
         page = nextPage
         currentPage = allPages.pageList[page]
+    }
+    
+    func showHideOptionButtons(option: String){
+        switch option {
+        case "hide":
+            topButton.isHidden = true
+            bottomButton.isHidden = true
+            restartButton.isHidden = false
+        case "show":
+            topButton.isHidden = false
+            bottomButton.isHidden = false
+            restartButton.isHidden = true
+        default:
+            topButton.isHidden = false
+            bottomButton.isHidden = false
+        }
     }
 
 }
