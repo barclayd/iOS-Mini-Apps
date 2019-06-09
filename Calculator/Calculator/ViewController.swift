@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var result: Float = 0
     var query: Array = [Int]()
     var queryBuilder: String = ""
+    var previousResult: Float = 0
     
     @IBOutlet weak var displayView: UILabel!
 
@@ -39,18 +40,28 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonPressed(_ sender: UIButton) {
+        
+        // TODO: Implement logic to handle after a calculation is made -> if user presses sender.tag > 9 && sender.tag != 11 -> then use previous result as firstNum
+        
+        // TODO: Else if sender.tag < 10 then resetCalc() - show new number on display and treat it as a new query
+        
         if sender.tag != 11 && sender.tag != 18 {
             updateDisplay(num: sender.tag)
             query.append(sender.tag)
-        } else if sender.tag == 18 {
+        } else if sender.tag == 18 || previousResult > 0 && sender.tag < 10 {
             resetCalc()
+            updateResultDisplay()
         } else {
             calculateQuery()
         }
     }
     
     func updateResultDisplay() {
-        displayView.text = String(result)
+        if result == round(result) {
+            displayView.text = String(Int(result))
+        } else {
+            displayView.text = String(result)
+        }
     }
     
     func updateDisplay(num: Int) {
@@ -77,16 +88,26 @@ class ViewController: UIViewController {
     
     func calculateQuery() {
 //      calculate index of operation within array by determining the max value in array
-        
-        let operationIdx = query.firstIndex(of: query.max()!)
-        let firstNum = query.prefix(operationIdx!)
-        let secondNum = query.suffix(query.count-1 - operationIdx!)
-        let operation = query[operationIdx!]
-        
-        result = operationLookUp(firstNum: determineNum(nums: firstNum), op: operation, secondNum: determineNum(nums: secondNum))
-        updateResultDisplay()
-        query.removeAll()
-//        query.append(result)
+        // no previous number calculated
+        if query.count > 2 && previousResult == 0 {
+            let operationIdx = query.firstIndex(of: query.max()!)
+            let firstNum = query.prefix(operationIdx!)
+            let secondNum = query.suffix(query.count-1 - operationIdx!)
+            let operation = query[operationIdx!]
+            
+            result = operationLookUp(firstNum: determineNum(nums: firstNum), op: operation, secondNum: determineNum(nums: secondNum))
+            afterResultCalc()
+        } else if query.count > 1 && previousResult != 0 {
+            let operationIdx = query.firstIndex(of: query.max()!)
+            
+            let secondNum = query.suffix(query.count-1 - operationIdx!)
+            let operation = query[operationIdx!]
+            
+            result = operationLookUp(firstNum: previousResult, op: operation, secondNum: determineNum(nums: secondNum))
+            
+            afterResultCalc()
+        }
+       
     }
     
     func determineNum(nums: ArraySlice<Int>) -> Float {
@@ -99,7 +120,6 @@ class ViewController: UIViewController {
             }
         }
 
-
         return Float(determinedNum) as! Float
     }
     
@@ -108,6 +128,13 @@ class ViewController: UIViewController {
         updateResultDisplay()
         query.removeAll()
         queryBuilder = ""
+        previousResult = 0
+    }
+    
+    func afterResultCalc() {
+        updateResultDisplay()
+        query.removeAll()
+        previousResult = result
     }
 }
 
