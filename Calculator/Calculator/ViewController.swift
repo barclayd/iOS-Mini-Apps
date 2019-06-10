@@ -41,14 +41,16 @@ class ViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: UIButton) {
         
-        // TODO: Implement logic to handle after a calculation is made -> if user presses sender.tag > 9 && sender.tag != 11 -> then use previous result as firstNum
         
         // TODO: Else if sender.tag < 10 then resetCalc() - show new number on display and treat it as a new query
+        
+        // Issue lies in if statement logic below
+        // scenario: user has made calculation, previousResult !=0 and sender.tag <10
         
         if sender.tag != 11 && sender.tag != 18 {
             updateDisplay(num: sender.tag)
             query.append(sender.tag)
-        } else if sender.tag == 18 || previousResult > 0 && sender.tag < 10 {
+        } else if sender.tag == 18 || (round(previousResult) != 0 && sender.tag < 10) {
             resetCalc()
             updateResultDisplay()
         } else {
@@ -66,11 +68,15 @@ class ViewController: UIViewController {
     
     func updateDisplay(num: Int) {
         
-        var lastOperation: Int! = 1
+        var lastOperation: Int = 1
         
-        if query.count > 0 {
-            lastOperation = query.last!
+        if let lastNumber = query.last {
+            if query.count > 0 {
+                lastOperation = lastNumber
+            }
         }
+        
+       
         
         if lastOperation > 9 {
             displayView.text = ""
