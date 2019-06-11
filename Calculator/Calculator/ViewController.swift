@@ -14,12 +14,12 @@ class ViewController: UIViewController {
     var query: Array = [Int]()
     var queryBuilder: String = ""
     var previousResult: Float = 0
+    var calculationsMade: Int = 0
     
     @IBOutlet weak var displayView: UILabel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         updateResultDisplay()
     }
     
@@ -38,15 +38,12 @@ class ViewController: UIViewController {
             return 0.0
         }
     }
-
+    
     @IBAction func buttonPressed(_ sender: UIButton) {
         
-        
-        // TODO: Else if sender.tag < 10 then resetCalc() - show new number on display and treat it as a new query
-        
-        // Issue lies in if statement logic below
-        // scenario: user has made calculation, previousResult !=0 and sender.tag <10
-        
+        if calculationsMade > 0 && sender.tag < 10 && query.count == 0 {
+            resetCalc()
+        }
         if sender.tag != 11 && sender.tag != 18 {
             updateDisplay(num: sender.tag)
             query.append(sender.tag)
@@ -76,8 +73,6 @@ class ViewController: UIViewController {
             }
         }
         
-       
-        
         if lastOperation > 9 {
             displayView.text = ""
             queryBuilder = ""
@@ -87,13 +82,13 @@ class ViewController: UIViewController {
             queryBuilder += String(num)
             displayView.text = queryBuilder
         } else if num == -1 {
-                queryBuilder += "."
-                displayView.text = queryBuilder
+            queryBuilder += "."
+            displayView.text = queryBuilder
         }
     }
     
     func calculateQuery() {
-//      calculate index of operation within array by determining the max value in array
+        //      calculate index of operation within array by determining the max value in array
         // no previous number calculated
         if query.count > 2 && previousResult == 0 {
             let operationIdx = query.firstIndex(of: query.max()!)
@@ -113,7 +108,7 @@ class ViewController: UIViewController {
             
             afterResultCalc()
         }
-       
+        
     }
     
     func determineNum(nums: ArraySlice<Int>) -> Float {
@@ -125,7 +120,7 @@ class ViewController: UIViewController {
                 determinedNum += String(num)
             }
         }
-
+        
         return Float(determinedNum) as! Float
     }
     
@@ -135,12 +130,14 @@ class ViewController: UIViewController {
         query.removeAll()
         queryBuilder = ""
         previousResult = 0
+        calculationsMade = 0
     }
     
     func afterResultCalc() {
         updateResultDisplay()
         query.removeAll()
         previousResult = result
+        calculationsMade += 1
     }
 }
 
