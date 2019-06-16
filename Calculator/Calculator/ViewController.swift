@@ -56,8 +56,19 @@ class ViewController: UIViewController {
     }
     
     func updateResultDisplay() {
+        
+        let intResultToDisply = String(Int(result))
+        
         if result == round(result) {
-            displayView.text = String(Int(result))
+            displayView.text = intResultToDisply
+        } else if intResultToDisply.count > 9 {
+            let intNum = intResultToDisply.count
+            let numDecimalPlaces = 9 - intNum
+            if numDecimalPlaces > 0 {
+                 displayView.text = String(format: "%.\(numDecimalPlaces)f", result)
+            } else {
+                displayView.text = intResultToDisply
+            }
         } else {
             displayView.text = String(result)
         }
@@ -90,7 +101,7 @@ class ViewController: UIViewController {
     func calculateQuery() {
         //      calculate index of operation within array by determining the max value in array
         // no previous number calculated
-        if query.count > 2 && previousResult == 0 {
+        if query.count > 2 && calculationsMade == 0 {
             let operationIdx = query.firstIndex(of: query.max()!)
             let firstNum = query.prefix(operationIdx!)
             let secondNum = query.suffix(query.count-1 - operationIdx!)
@@ -98,7 +109,7 @@ class ViewController: UIViewController {
             
             result = operationLookUp(firstNum: determineNum(nums: firstNum), op: operation, secondNum: determineNum(nums: secondNum))
             afterResultCalc()
-        } else if query.count > 1 && previousResult != 0 {
+        } else if query.count > 1 && calculationsMade != 0 {
             let operationIdx = query.firstIndex(of: query.max()!)
             
             let secondNum = query.suffix(query.count-1 - operationIdx!)
