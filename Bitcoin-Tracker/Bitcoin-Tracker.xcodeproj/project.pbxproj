@@ -7,73 +7,100 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65086C6422BD7B4700C88776 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65086C6322BD7B4700C88776 /* AppDelegate.swift */; };
-		65086C6622BD7B4700C88776 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65086C6522BD7B4700C88776 /* ViewController.swift */; };
-		65086C6B22BD7B4800C88776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65086C6A22BD7B4800C88776 /* Assets.xcassets */; };
-		65086C6E22BD7B4800C88776 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65086C6C22BD7B4800C88776 /* LaunchScreen.storyboard */; };
-		65086C7622BD7BBE00C88776 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65086C7522BD7BBE00C88776 /* Main.storyboard */; };
+		51E0852A7AC590E6A8A8ED16 /* Pods_Bitcoin_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDB4DC422A442AAF4FFB222 /* Pods_Bitcoin_Tracker.framework */; };
+		65086C8622BD805500C88776 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65086C8522BD805500C88776 /* AppDelegate.swift */; };
+		65086C8822BD805500C88776 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65086C8722BD805500C88776 /* ViewController.swift */; };
+		65086C8D22BD805600C88776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65086C8C22BD805600C88776 /* Assets.xcassets */; };
+		65086C9022BD805600C88776 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65086C8E22BD805600C88776 /* LaunchScreen.storyboard */; };
+		65FDB3B422BD8182006A997F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FDB3B322BD8182006A997F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		65086C6022BD7B4700C88776 /* Bitcoin-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitcoin-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		65086C6322BD7B4700C88776 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65086C6522BD7B4700C88776 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		65086C6A22BD7B4800C88776 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		65086C6D22BD7B4800C88776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		65086C6F22BD7B4800C88776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65086C7522BD7BBE00C88776 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1DDB4DC422A442AAF4FFB222 /* Pods_Bitcoin_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitcoin_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		503F0750FE2112157E54D659 /* Pods-Bitcoin-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcoin-Tracker.release.xcconfig"; path = "Target Support Files/Pods-Bitcoin-Tracker/Pods-Bitcoin-Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		65086C8222BD805500C88776 /* Bitcoin-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitcoin-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65086C8522BD805500C88776 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		65086C8722BD805500C88776 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		65086C8C22BD805600C88776 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65086C8F22BD805600C88776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		65086C9122BD805600C88776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65FDB3B322BD8182006A997F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E3473196477C11DFC4C12789 /* Pods-Bitcoin-Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcoin-Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Bitcoin-Tracker/Pods-Bitcoin-Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		65086C5D22BD7B4700C88776 /* Frameworks */ = {
+		65086C7F22BD805500C88776 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E0852A7AC590E6A8A8ED16 /* Pods_Bitcoin_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		65086C5722BD7B4700C88776 = {
+		0D8BA88F1498C324DA6CBBA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				65086C6222BD7B4700C88776 /* Bitcoin-Tracker */,
-				65086C6122BD7B4700C88776 /* Products */,
+				1DDB4DC422A442AAF4FFB222 /* Pods_Bitcoin_Tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65086C7922BD805500C88776 = {
+			isa = PBXGroup;
+			children = (
+				65086C8422BD805500C88776 /* Bitcoin-Tracker */,
+				65086C8322BD805500C88776 /* Products */,
+				87D704256863E78D6316995A /* Pods */,
+				0D8BA88F1498C324DA6CBBA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		65086C6122BD7B4700C88776 /* Products */ = {
+		65086C8322BD805500C88776 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				65086C6022BD7B4700C88776 /* Bitcoin-Tracker.app */,
+				65086C8222BD805500C88776 /* Bitcoin-Tracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		65086C6222BD7B4700C88776 /* Bitcoin-Tracker */ = {
+		65086C8422BD805500C88776 /* Bitcoin-Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				65086C6322BD7B4700C88776 /* AppDelegate.swift */,
-				65086C6522BD7B4700C88776 /* ViewController.swift */,
-				65086C7522BD7BBE00C88776 /* Main.storyboard */,
-				65086C6A22BD7B4800C88776 /* Assets.xcassets */,
-				65086C6C22BD7B4800C88776 /* LaunchScreen.storyboard */,
-				65086C6F22BD7B4800C88776 /* Info.plist */,
+				65086C8522BD805500C88776 /* AppDelegate.swift */,
+				65086C8722BD805500C88776 /* ViewController.swift */,
+				65FDB3B322BD8182006A997F /* Main.storyboard */,
+				65086C8C22BD805600C88776 /* Assets.xcassets */,
+				65086C8E22BD805600C88776 /* LaunchScreen.storyboard */,
+				65086C9122BD805600C88776 /* Info.plist */,
 			);
 			path = "Bitcoin-Tracker";
+			sourceTree = "<group>";
+		};
+		87D704256863E78D6316995A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3473196477C11DFC4C12789 /* Pods-Bitcoin-Tracker.debug.xcconfig */,
+				503F0750FE2112157E54D659 /* Pods-Bitcoin-Tracker.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		65086C5F22BD7B4700C88776 /* Bitcoin-Tracker */ = {
+		65086C8122BD805500C88776 /* Bitcoin-Tracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65086C7222BD7B4800C88776 /* Build configuration list for PBXNativeTarget "Bitcoin-Tracker" */;
+			buildConfigurationList = 65086C9422BD805600C88776 /* Build configuration list for PBXNativeTarget "Bitcoin-Tracker" */;
 			buildPhases = (
-				65086C5C22BD7B4700C88776 /* Sources */,
-				65086C5D22BD7B4700C88776 /* Frameworks */,
-				65086C5E22BD7B4700C88776 /* Resources */,
+				2BFFE05D7A31EB9C1B661634 /* [CP] Check Pods Manifest.lock */,
+				65086C7E22BD805500C88776 /* Sources */,
+				65086C7F22BD805500C88776 /* Frameworks */,
+				65086C8022BD805500C88776 /* Resources */,
+				D85F7F455B92A6F9482E7336 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -81,25 +108,25 @@
 			);
 			name = "Bitcoin-Tracker";
 			productName = "Bitcoin-Tracker";
-			productReference = 65086C6022BD7B4700C88776 /* Bitcoin-Tracker.app */;
+			productReference = 65086C8222BD805500C88776 /* Bitcoin-Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		65086C5822BD7B4700C88776 /* Project object */ = {
+		65086C7A22BD805500C88776 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Daniel Barclay";
 				TargetAttributes = {
-					65086C5F22BD7B4700C88776 = {
+					65086C8122BD805500C88776 = {
 						CreatedOnToolsVersion = 10.2;
 					};
 				};
 			};
-			buildConfigurationList = 65086C5B22BD7B4700C88776 /* Build configuration list for PBXProject "Bitcoin-Tracker" */;
+			buildConfigurationList = 65086C7D22BD805500C88776 /* Build configuration list for PBXProject "Bitcoin-Tracker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,46 +134,88 @@
 				en,
 				Base,
 			);
-			mainGroup = 65086C5722BD7B4700C88776;
-			productRefGroup = 65086C6122BD7B4700C88776 /* Products */;
+			mainGroup = 65086C7922BD805500C88776;
+			productRefGroup = 65086C8322BD805500C88776 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				65086C5F22BD7B4700C88776 /* Bitcoin-Tracker */,
+				65086C8122BD805500C88776 /* Bitcoin-Tracker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		65086C5E22BD7B4700C88776 /* Resources */ = {
+		65086C8022BD805500C88776 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65086C6E22BD7B4800C88776 /* LaunchScreen.storyboard in Resources */,
-				65086C6B22BD7B4800C88776 /* Assets.xcassets in Resources */,
-				65086C7622BD7BBE00C88776 /* Main.storyboard in Resources */,
+				65FDB3B422BD8182006A997F /* Main.storyboard in Resources */,
+				65086C9022BD805600C88776 /* LaunchScreen.storyboard in Resources */,
+				65086C8D22BD805600C88776 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2BFFE05D7A31EB9C1B661634 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bitcoin-Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D85F7F455B92A6F9482E7336 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bitcoin-Tracker/Pods-Bitcoin-Tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bitcoin-Tracker/Pods-Bitcoin-Tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bitcoin-Tracker/Pods-Bitcoin-Tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		65086C5C22BD7B4700C88776 /* Sources */ = {
+		65086C7E22BD805500C88776 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65086C6622BD7B4700C88776 /* ViewController.swift in Sources */,
-				65086C6422BD7B4700C88776 /* AppDelegate.swift in Sources */,
+				65086C8822BD805500C88776 /* ViewController.swift in Sources */,
+				65086C8622BD805500C88776 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		65086C6C22BD7B4800C88776 /* LaunchScreen.storyboard */ = {
+		65086C8E22BD805600C88776 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				65086C6D22BD7B4800C88776 /* Base */,
+				65086C8F22BD805600C88776 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -154,7 +223,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		65086C7022BD7B4800C88776 /* Debug */ = {
+		65086C9222BD805600C88776 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,7 +284,7 @@
 			};
 			name = Debug;
 		};
-		65086C7122BD7B4800C88776 /* Release */ = {
+		65086C9322BD805600C88776 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -270,8 +339,9 @@
 			};
 			name = Release;
 		};
-		65086C7322BD7B4800C88776 /* Debug */ = {
+		65086C9522BD805600C88776 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3473196477C11DFC4C12789 /* Pods-Bitcoin-Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -288,8 +358,9 @@
 			};
 			name = Debug;
 		};
-		65086C7422BD7B4800C88776 /* Release */ = {
+		65086C9622BD805600C88776 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 503F0750FE2112157E54D659 /* Pods-Bitcoin-Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -309,25 +380,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		65086C5B22BD7B4700C88776 /* Build configuration list for PBXProject "Bitcoin-Tracker" */ = {
+		65086C7D22BD805500C88776 /* Build configuration list for PBXProject "Bitcoin-Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				65086C7022BD7B4800C88776 /* Debug */,
-				65086C7122BD7B4800C88776 /* Release */,
+				65086C9222BD805600C88776 /* Debug */,
+				65086C9322BD805600C88776 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65086C7222BD7B4800C88776 /* Build configuration list for PBXNativeTarget "Bitcoin-Tracker" */ = {
+		65086C9422BD805600C88776 /* Build configuration list for PBXNativeTarget "Bitcoin-Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				65086C7322BD7B4800C88776 /* Debug */,
-				65086C7422BD7B4800C88776 /* Release */,
+				65086C9522BD805600C88776 /* Debug */,
+				65086C9622BD805600C88776 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 65086C5822BD7B4700C88776 /* Project object */;
+	rootObject = 65086C7A22BD805500C88776 /* Project object */;
 }
