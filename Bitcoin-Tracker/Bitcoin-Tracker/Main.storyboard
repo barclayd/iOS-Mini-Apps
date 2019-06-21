@@ -51,10 +51,10 @@
                                             <constraint firstAttribute="height" constant="170" id="wlw-GP-n0w"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jg7-Dt-rnc">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jg7-Dt-rnc">
                                         <rect key="frame" x="0.0" y="238" width="359" height="110"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="110" id="YfF-6e-Aok"/>
+                                            <constraint firstAttribute="height" constant="110" id="yzm-hA-UYR"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="54"/>
                                         <color key="textColor" red="0.21960784310000001" green="0.41176470590000003" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -62,15 +62,14 @@
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Jg7-Dt-rnc" secondAttribute="trailing" constant="16" id="2tN-X3-UdF"/>
+                                    <constraint firstItem="Jg7-Dt-rnc" firstAttribute="top" secondItem="c1V-SU-qjY" secondAttribute="bottom" constant="68" id="5Pw-ld-B0g"/>
                                     <constraint firstItem="c1V-SU-qjY" firstAttribute="top" secondItem="H4g-qN-MbT" secondAttribute="top" id="FRT-xJ-oZD"/>
                                     <constraint firstItem="c1V-SU-qjY" firstAttribute="leading" secondItem="H4g-qN-MbT" secondAttribute="leading" id="Gjz-QA-PvA"/>
-                                    <constraint firstItem="Jg7-Dt-rnc" firstAttribute="top" secondItem="c1V-SU-qjY" secondAttribute="bottom" constant="200" id="Rz2-0q-2Sp"/>
-                                    <constraint firstItem="Jg7-Dt-rnc" firstAttribute="top" secondItem="c1V-SU-qjY" secondAttribute="bottom" id="cpq-zw-rnu"/>
+                                    <constraint firstItem="Jg7-Dt-rnc" firstAttribute="leading" secondItem="c1V-SU-qjY" secondAttribute="leading" id="bc0-2U-WSX"/>
                                     <constraint firstAttribute="bottom" secondItem="ZGz-pe-AwG" secondAttribute="bottom" constant="8" id="gQW-rN-B2C"/>
                                     <constraint firstAttribute="trailing" secondItem="ZGz-pe-AwG" secondAttribute="trailing" id="han-oI-JPz"/>
-                                    <constraint firstItem="Jg7-Dt-rnc" firstAttribute="leading" secondItem="H4g-qN-MbT" secondAttribute="leading" constant="8" id="mgD-eu-Zzd"/>
                                     <constraint firstItem="ZGz-pe-AwG" firstAttribute="leading" secondItem="H4g-qN-MbT" secondAttribute="leading" id="tNh-l6-Ov8"/>
-                                    <constraint firstAttribute="trailing" secondItem="Jg7-Dt-rnc" secondAttribute="trailing" constant="8" id="yiX-pV-MQZ"/>
                                     <constraint firstAttribute="trailing" secondItem="c1V-SU-qjY" secondAttribute="trailing" id="zdA-T6-U42"/>
                                 </constraints>
                             </view>
