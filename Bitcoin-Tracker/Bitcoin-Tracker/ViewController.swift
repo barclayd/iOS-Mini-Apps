@@ -93,21 +93,22 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     //MARK: Server request
     func getBitcoinPrice(currency: (String, String)) {
         let url: String = "\(baseURL)" + currency.0
-        print(url)
         
         Alamofire.request(url, method: .get).responseJSON {
             response in
             if response.result.isSuccess {
-                print(response.result)
                 let bitcoinJSON = JSON(response.result.value)
                 let result = bitcoinJSON["averages"]["day"]
 
                 if let bitcoinResult: Float = result.float {
-                    self.setBitcoinPrice(price: String(format: "%2.f", bitcoinResult), currencySymbol: currency.1)
+                    self.setBitcoinPrice(price: String(format: "%.2f", bitcoinResult), currencySymbol: currency.1)
                 } else {
                     self.setBitcoinPrice(price: "Could not reach server...", currencySymbol: "")
                 }
                 
+            } else {
+                print("Error: \(response.result.error)")
+                self.bitcoinPriceLabel.text = "Bitcoin Data Unavailable"
             }
         }
     }
