@@ -7,6 +7,8 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+        
+    @IBOutlet weak var titleText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,21 +23,21 @@ class ViewController: UIViewController {
     
     var timer = Timer()
     
-    let cookingTimes: [String: Int] = ["soft": 5, "medium": 8, "hard": 12]
+    let cookingTimes: [String: Int] = ["soft": 1, "medium": 8, "hard": 12]
     
     @IBAction func hardnessSelected(_ hardness: UIButton) {
         
-        timer.invalidate()
+        self.resetTimer()
         
         let eggSelected = hardness.currentTitle!
         
         timerLength = cookingTimes[eggSelected.lowercased()]!
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimedCode), userInfo: eggSelected, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: eggSelected, repeats: true)
     }
     
     func showAlert() {
-        eggAlert = UIAlertController(title: "Egg is Ready!", message: "Your eggs should now be \(timer.userInfo!)", preferredStyle: .alert)
+        eggAlert = UIAlertController(title: "Egg is Ready!", message: "Your \(timer.userInfo!) eggs should now have been cooked egg-ceptionally well", preferredStyle: .alert)
         eggAlert?.addAction(UIAlertAction(title: "OK", style: .default, handler: {
             action in
             switch action.style{
@@ -47,14 +49,15 @@ class ViewController: UIViewController {
         self.present(eggAlert!, animated: true, completion: nil)
     }
     
-    @objc func runTimedCode() {
+    @objc func updateTimer() {
         print("counter: \(counter)")
-        if (counter == timerLength) {
+        if (counter == timerLength * 60) {
             self.showAlert()
             self.playSound(soundFile: "alarm_sound.mp3")
-            timer.invalidate()
+            self.timer.invalidate()
         }
-        counter += 1
+        self.counter += 1
+        self.updateTitleText()
     }
     
     func playSound(soundFile: String) {
@@ -73,9 +76,32 @@ class ViewController: UIViewController {
         }
     }
     
+    func updateTitleText() {
+        let timeToGo = (timerLength * 60) - counter
+        if timeToGo > 59 {
+            let minutes = Float(timeToGo / 60).rounded(.down)
+            let seconds = Float(timeToGo) - (minutes * 60)
+            if (minutes > 1) {
+                titleText.text = "\(String(format: "%.0f", minutes)) mins \(String(format: "%.0f", seconds)) seconds left"
+            } else {
+                titleText.text = "1 min \(String(format: "%.0f", seconds)) seconds left"
+            }
+        } else if timeToGo > 0 {
+            titleText.text = "\(timeToGo) seconds left"
+        } else {
+            titleText.text = "Enjoy your eggcellent eggs!"
+        }
+    }
+    
     func reset() {
         timerSound?.stop()
         counter = 0
         timerLength = 0
+    }
+    
+    func resetTimer() {
+        timer.invalidate()
+        timerLength = 0
+        counter = 0
     }
 }
