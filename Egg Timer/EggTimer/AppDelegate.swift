@@ -1,7 +1,7 @@
 //
 //  AppDelegate.swift
-//  Egg-Timer
-//
+//  EggTimer
+
 
 import UIKit
 
