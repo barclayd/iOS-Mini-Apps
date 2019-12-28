@@ -7,8 +7,11 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-        
+    
     @IBOutlet weak var titleText: UILabel!
+    
+    @IBOutlet weak var progressBar: UIProgressView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +26,7 @@ class ViewController: UIViewController {
     
     var timer = Timer()
     
-    let cookingTimes: [String: Int] = ["soft": 1, "medium": 8, "hard": 12]
+    let cookingTimes: [String: Int] = ["soft": 5, "medium": 8, "hard": 12]
     
     @IBAction func hardnessSelected(_ hardness: UIButton) {
         
@@ -37,7 +40,7 @@ class ViewController: UIViewController {
     }
     
     func showAlert() {
-        eggAlert = UIAlertController(title: "Egg is Ready!", message: "Your \(timer.userInfo!) eggs should now have been cooked egg-ceptionally well", preferredStyle: .alert)
+        eggAlert = UIAlertController(title: "Egg is Ready!", message: "Your \(timer.userInfo!)) eggs should now have been cooked egg-ceptionally well", preferredStyle: .alert)
         eggAlert?.addAction(UIAlertAction(title: "OK", style: .default, handler: {
             action in
             switch action.style{
@@ -50,7 +53,6 @@ class ViewController: UIViewController {
     }
     
     @objc func updateTimer() {
-        print("counter: \(counter)")
         if (counter == timerLength * 60) {
             self.showAlert()
             self.playSound(soundFile: "alarm_sound.mp3")
@@ -58,6 +60,7 @@ class ViewController: UIViewController {
         }
         self.counter += 1
         self.updateTitleText()
+    self.progressBar.setProgress(self.updateProgressBar(), animated: true)
     }
     
     func playSound(soundFile: String) {
@@ -93,6 +96,10 @@ class ViewController: UIViewController {
         }
     }
     
+    func updateProgressBar() -> Float {
+        return Float(counter)/Float(timerLength * 60)
+    }
+    
     func reset() {
         timerSound?.stop()
         counter = 0
@@ -103,5 +110,6 @@ class ViewController: UIViewController {
         timer.invalidate()
         timerLength = 0
         counter = 0
+        progressBar.setProgress(0.0, animated: true)
     }
 }
