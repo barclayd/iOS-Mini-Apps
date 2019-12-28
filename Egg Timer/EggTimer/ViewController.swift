@@ -19,14 +19,14 @@ class ViewController: UIViewController {
     
     var timerLength: Int = 0
     var counter = 0
-    
+        
     var eggAlert: UIAlertController?
     
     var timerSound: AVAudioPlayer?
     
     var timer = Timer()
-    
-    let cookingTimes: [String: Int] = ["soft": 5, "medium": 8, "hard": 12]
+        
+    let cookingTimes: [String: Int] = ["soft": 1, "medium": 8, "hard": 12]
     
     @IBAction func hardnessSelected(_ hardness: UIButton) {
         
@@ -34,13 +34,15 @@ class ViewController: UIViewController {
         
         let eggSelected = hardness.currentTitle!
         
-        timerLength = cookingTimes[eggSelected.lowercased()]!
+        let eggsType = eggSelected.lowercased()
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: eggSelected, repeats: true)
+        timerLength = cookingTimes[eggsType]!
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: eggsType, repeats: true)
     }
     
     func showAlert() {
-        eggAlert = UIAlertController(title: "Egg is Ready!", message: "Your \(timer.userInfo!)) eggs should now have been cooked egg-ceptionally well", preferredStyle: .alert)
+        eggAlert = UIAlertController(title: "Egg is Ready!", message: "Your \(timer.userInfo!) eggs should now have been cooked egg-ceptionally well", preferredStyle: .alert)
         eggAlert?.addAction(UIAlertAction(title: "OK", style: .default, handler: {
             action in
             switch action.style{
@@ -82,15 +84,17 @@ class ViewController: UIViewController {
     func updateTitleText() {
         let timeToGo = (timerLength * 60) - counter
         if timeToGo > 59 {
+            let eggsText = "cooking \(timer.userInfo!) eggs"
             let minutes = Float(timeToGo / 60).rounded(.down)
             let seconds = Float(timeToGo) - (minutes * 60)
             if (minutes > 1) {
-                titleText.text = "\(String(format: "%.0f", minutes)) mins \(String(format: "%.0f", seconds)) seconds left"
+                titleText.text = "\(String(format: "%.0f", minutes)) mins \(String(format: "%.0f", seconds)) seconds left \(eggsText)"
             } else {
-                titleText.text = "1 min \(String(format: "%.0f", seconds)) seconds left"
+                titleText.text = "1 min \(String(format: "%.0f", seconds)) seconds left \(eggsText)"
             }
         } else if timeToGo > 0 {
-            titleText.text = "\(timeToGo) seconds left"
+            let eggsText = "cooking \(timer.userInfo!) eggs"
+            titleText.text = "\(timeToGo) seconds left \(eggsText)"
         } else {
             titleText.text = "Enjoy your eggcellent eggs!"
         }
