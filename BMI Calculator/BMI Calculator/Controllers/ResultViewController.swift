@@ -10,7 +10,7 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-    var bmiValue: String?
+    var bmi: BMICalculator?
     
     @IBOutlet weak var bmiResult: UILabel!
     
@@ -19,33 +19,12 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bmiResult.text = bmiValue!
-        adviceLabel.text = determineBMIAdvice(BMI: bmiValue!).advice.uppercased()
-        adviceLabel.textColor = determineBMIAdvice(BMI: bmiValue!).colour
+        bmiResult.text = self.bmi?.textValue
+        adviceLabel.text = determineBMIAdvice(bmi: bmi!.value!).advice.uppercased()
+        adviceLabel.textColor = determineBMIAdvice(bmi: bmi!.value!).colour
     }
     
     @IBAction func recalculateButton(_ sender: UIButton) {
-    }
-    
-    struct BMIAdivce {
-        var advice: String
-        var colour: UIColor
-    }
-    
-    func determineBMIAdvice(BMI: String) -> BMIAdivce {
-        let bmiValue = Float(BMI)!
-        
-        switch bmiValue {
-        case 0..<18.5:
-            return BMIAdivce(advice: "Category: Underweight", colour: .blue)
-        case 18.5..<24.9:
-            return BMIAdivce(advice: "Category: Normal weight", colour: .green)
-        case 25..<30:
-            return BMIAdivce(advice: "Category: Overweight", colour: .yellow)
-        case 30...1000:
-            return BMIAdivce(advice: "Category: Obese", colour: .red)
-        default:
-            return BMIAdivce(advice: "BMI value could not be calculated. Please try again", colour: .gray)
-        }
+       self.dismiss(animated: true, completion: nil)
     }
 }

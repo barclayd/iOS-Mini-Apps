@@ -14,7 +14,7 @@ class CalculateViewController: UIViewController {
     
     @IBOutlet weak var calculateBMI: UIButton!
     
-    var bmiResult: String?
+    var bmi = BMICalculator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,17 +37,13 @@ class CalculateViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultViewController
-            destinationVC.bmiValue = bmiResult!
+            destinationVC.bmi = self.bmi
         }
     }
     
     @IBAction func calculate(_ sender: UIButton) {
-        let height = Float(heightSlider.value)
-        let BMI = (weightSlider.value)/(pow(height, 2))
-        bmiResult = "\(String(format: "%.1f", BMI))"
-        
+        bmi.calculate(weight: weightSlider.value, height: heightSlider.value)
         self.performSegue(withIdentifier: "goToResult", sender: self)
-        
     }
 }
 
