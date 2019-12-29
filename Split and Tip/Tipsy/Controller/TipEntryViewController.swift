@@ -23,6 +23,11 @@ class TipEntryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+
+        view.addGestureRecognizer(tap)
     }
     
     func setBackgroundColour(activeButton: UIButton) {
@@ -34,6 +39,10 @@ class TipEntryViewController: UIViewController {
                 option?.isSelected = false
             }
         }
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func tipAmount(_ sender: UIButton) {
@@ -48,13 +57,8 @@ class TipEntryViewController: UIViewController {
     @IBAction func calculateTip(_ button: UIButton) {
         if let billAmount = billTotal.text {
             if billAmount.count > 0 && (Float(billAmount) != nil) {
-                let bill = Float(billAmount)!
-                let tipMultiplier = Float("1.\(tipAmount)")!
-                let billWithTip = tipAmount == 0 ? bill : Float(bill * tipMultiplier)
-                let numberToSplitBy = Float(splitLabel.text!)
-                print(String(format: "%.2f", billWithTip))
-                let billPerPerson = billWithTip / numberToSplitBy!
-                print(String(format: "%.2f", billPerPerson))
+                var tip = Tip(billAmount: Float(billAmount)!, tipPercent: tipAmount)
+                print(tip.billPerPerson(splitNumber: Int(splitLabel.text!)!))
             }
         }
     }
