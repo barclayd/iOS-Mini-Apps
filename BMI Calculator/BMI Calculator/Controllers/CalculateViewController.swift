@@ -5,7 +5,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculateViewController: UIViewController {
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var weightSlider: UISlider!
 
@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var weightLabel: UILabel!
     
     @IBOutlet weak var calculateBMI: UIButton!
+    
+    var bmiResult: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +34,20 @@ class ViewController: UIViewController {
         label.text = "\(String(format: "%.\(decimalPlaces)f", slider.value)) \(measurement)"
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult" {
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.bmiValue = bmiResult!
+        }
+    }
+    
     @IBAction func calculate(_ sender: UIButton) {
         let height = Float(heightSlider.value)
         let BMI = (weightSlider.value)/(pow(height, 2))
-        let BMItext = "\(String(format: "%.1f", BMI))"
+        bmiResult = "\(String(format: "%.1f", BMI))"
         
-        let bmiResultController = BMIResultController(result: BMItext)
-        self.present(bmiResultController, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "goToResult", sender: self)
+        
     }
 }
 
