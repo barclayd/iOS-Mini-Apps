@@ -11,11 +11,12 @@ import Foundation
 struct Tip {
     var billAmount: Float
     var tipPercent: Int
+    var splitNumber: Int
     
-    func billPerPerson(splitNumber: Int) -> String {
+    mutating func billPerPerson() -> String {
         let tipMultiplier = Float("1.\(self.tipPercent)")!
         let billWithTip = tipPercent == 0 ? self.billAmount : Float(self.billAmount * tipMultiplier)
-        let billPerPerson = billWithTip / Float(splitNumber)
+        let billPerPerson = billWithTip / Float(self.splitNumber)
         return String(format: "%.2f", billPerPerson)
     }
 }

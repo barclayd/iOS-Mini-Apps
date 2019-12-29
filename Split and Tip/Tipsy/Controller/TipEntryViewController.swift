@@ -20,6 +20,8 @@ class TipEntryViewController: UIViewController {
     
     var tipAmount: Int = 10
     
+    var tip = Tip(billAmount: 0.0, tipPercent: 0, splitNumber: 0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -45,6 +47,13 @@ class TipEntryViewController: UIViewController {
         view.endEditing(true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult" {
+            let destinationVC = segue.destination as! TipResultViewController
+            destinationVC.tip = self.tip
+        }
+    }
+    
     @IBAction func tipAmount(_ sender: UIButton) {
         tipAmount = sender.tag
         setBackgroundColour(activeButton: sender)
@@ -57,8 +66,9 @@ class TipEntryViewController: UIViewController {
     @IBAction func calculateTip(_ button: UIButton) {
         if let billAmount = billTotal.text {
             if billAmount.count > 0 && (Float(billAmount) != nil) {
-                var tip = Tip(billAmount: Float(billAmount)!, tipPercent: tipAmount)
-                print(tip.billPerPerson(splitNumber: Int(splitLabel.text!)!))
+                tip = Tip(billAmount: Float(billAmount)!, tipPercent: tipAmount, splitNumber: Int(splitLabel.text!)!)
+                print(tip.billPerPerson())
+                self.performSegue(withIdentifier: "goToResult", sender: self)
             }
         }
     }
