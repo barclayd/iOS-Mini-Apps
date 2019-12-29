@@ -21,15 +21,24 @@ class ViewController: UIViewController {
     }
 
     @IBAction func heightSlider(_ height: UISlider) {
-        updateLabelFromSlider(label: heightLabel, slider: heightSlider, measurement: "m")
+        updateLabelFromSlider(label: heightLabel, slider: heightSlider, measurement: "m", decimalPlaces: 2)
     }
     
     @IBAction func weightSlider(_ sender: UISlider) {
-                updateLabelFromSlider(label: weightLabel, slider: weightSlider, measurement: "KG")
+                updateLabelFromSlider(label: weightLabel, slider: weightSlider, measurement: "KG", decimalPlaces: 0)
     }
     
-    func updateLabelFromSlider(label: UILabel, slider: UISlider, measurement: String) {
-        label.text = "\(String(format: "%.1f", slider.value)) \(measurement)"
+    func updateLabelFromSlider(label: UILabel, slider: UISlider, measurement: String, decimalPlaces: Int = 1) {
+        label.text = "\(String(format: "%.\(decimalPlaces)f", slider.value)) \(measurement)"
+    }
+    
+    @IBAction func calculate(_ sender: UIButton) {
+        let height = Float(heightSlider.value)
+        let BMI = (weightSlider.value)/(pow(height, 2))
+        let BMItext = "\(String(format: "%.1f", BMI))"
+        
+        let bmiResultController = BMIResultController(result: BMItext)
+        self.present(bmiResultController, animated: true, completion: nil)
     }
 }
 
