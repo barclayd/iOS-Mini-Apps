@@ -12,6 +12,8 @@ class ResultViewController: UIViewController {
     
     var bmi: BMICalculator?
     
+    var defaultValue: Float = 0.0
+    
     @IBOutlet weak var bmiResult: UILabel!
     
     @IBOutlet weak var adviceLabel: UILabel!
@@ -20,8 +22,8 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         
         bmiResult.text = self.bmi?.textValue
-        adviceLabel.text = determineBMIAdvice(bmi: bmi!.value!).advice.uppercased()
-        adviceLabel.textColor = determineBMIAdvice(bmi: bmi!.value!).colour
+        adviceLabel.text = determineBMIAdvice(bmi: bmi?.value ?? defaultValue).advice.uppercased()
+        view.backgroundColor = determineBMIAdvice(bmi: bmi?.value ?? defaultValue).colour
     }
     
     @IBAction func recalculateButton(_ sender: UIButton) {

@@ -15,6 +15,6 @@ struct BMICalculator {
     
     mutating func calculate(weight: Float, height: Float) {
         self.value = (weight)/(pow(height, 2))
-        self.textValue = "\(String(format: "%.1f", self.value!))"
+        self.textValue = "\(String(format: "%.1f", self.value ?? 0.0))"
     }
 }
