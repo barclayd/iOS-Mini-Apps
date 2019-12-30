@@ -10,8 +10,12 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"]
-    var correctAnswer = Int.random(in: 0...2)
+    @State private var showScore = false
+    @State private var score = 0
+    @State private var result = ""
+
+    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
+    @State private var correctAnswer = Int.random(in: 0...2)
     
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -30,7 +34,7 @@ struct ContentView: View {
                     Spacer()
                     ForEach(0..<3) {
                         number in Button(action: {
-                            // flag was tapped
+                            self.flagTapped(number)
                         }) {
                             Image(self.countries[number]).renderingMode(.original)
                         }
@@ -38,8 +42,28 @@ struct ContentView: View {
                     Spacer()
                 }
             }
+            .alert(isPresented: $showScore) {
+                Alert(title: Text(result), message: Text("Your score is \(score)"), dismissButton: .default(Text("Continue")) {
+                    self.nextQuestion()
+                    })
+            }
             .navigationBarTitle("Guess The Flag", displayMode: .inline)
         }
+    }
+    
+    func flagTapped(_ number: Int) {
+        if number == correctAnswer {
+            score += 1
+            result = "Correct"
+        } else {
+            result = "Incorrect"
+        }
+        showScore = true
+    }
+    
+    func nextQuestion() {
+        self.countries.shuffle()
+        self.correctAnswer = Int.random(in: 0...2)
     }
     
 }
