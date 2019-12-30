@@ -14,6 +14,9 @@ struct ContentView: View {
     @State private var coffeeAmount = 1
     @State private var wakeUp = Date()
     
+    @State private var showAlert = false
+    @State private var suggestedBedTime: String = ""
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -43,10 +46,27 @@ struct ContentView: View {
                 Text("Calculate")
             })
         }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Suggsted Bed Time"), message: Text(suggestedBedTime), dismissButton: .default(Text("OK")))
+        }
     }
     
     func calculateBedTime() {
-        
+        let model = SleepCalculator()
+        let components = Calendar.current.dateComponents([.hour, .minute], from: wakeUp)
+        let hour = (components.hour ?? 0) * 60 * 60
+        let minute = (components.minute ?? 0) * 60
+        do {
+            let prediction = try model.prediction(wake: Double(hour + minute), estimatedSleep: sleepAmount, coffee: Double(coffeeAmount))
+            let sleepTime = wakeUp - prediction.actualSleep
+            
+            let formatter = DateFormatter()
+            formatter.timeStyle = .short
+            suggestedBedTime = formatter.string(from: sleepTime)
+        } catch {
+            suggestedBedTime = "Sorry, an error occured when calculating a suggested bed time"
+        }
+        showAlert = true
     }
 }
 
