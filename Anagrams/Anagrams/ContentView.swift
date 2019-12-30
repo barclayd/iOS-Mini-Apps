@@ -17,37 +17,39 @@ struct ContentView: View {
     let dogs = ["Nodster", "Tedster", "Rooster"]
     
     func checkSpellingOfWord(word: String) -> Bool {
-            let checker = UITextChecker()
-            let range = NSRange(location: 0, length: word.utf16.count)
-            let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
-            let isValidWord = misspelledRange.location == NSNotFound
-            return isValidWord
-        }
-        
-        func addNewWord() {
-            let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
-            guard answer.count > 0 else {
-                return
-            }
-            usedWords.insert(answer, at: 0)
-            newWord = ""
-        }
+        let checker = UITextChecker()
+        let range = NSRange(location: 0, length: word.utf16.count)
+        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
+        let isValidWord = misspelledRange.location == NSNotFound
+        return isValidWord
+    }
     
-    var body: some View {
-        
+    func addNewWord() {
+        let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        guard answer.count > 0 else {
+            return
+        }
+        usedWords.insert(answer.firstCapitalized, at: 0)
+        newWord = ""
+    }
+    
+    func loadWords() {
         if let fileURL = Bundle.main.url(forResource: "words", withExtension: "txt") {
             if let fileContents = try? String(contentsOf: fileURL) {
                 let words = fileContents.components(separatedBy: "\n")
                 let word = words.randomElement()
                 let trimmedWord = word?.trimmingCharacters(in: .whitespacesAndNewlines)
-                print(trimmedWord!)
+                rootWord = trimmedWord?.firstCapitalized ?? "Applique"
             }
+            return
         }
-        
-        return NavigationView {
+        fatalError("Could not load words.txt from bundle")
+    }
+    
+    var body: some View {
+        NavigationView {
             VStack {
                 TextField("Enter your word", text: $newWord, onCommit: addNewWord).textFieldStyle(RoundedBorderTextFieldStyle())
-                    .autocapitalization(.none)
                     .padding()
                 List(usedWords, id: \.self) {
                     Image(systemName: "\($0.count).circle")
@@ -56,7 +58,14 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle(rootWord)
+            .onAppear(perform: loadWords)
         }
+    }
+}
+
+extension StringProtocol {
+    var firstCapitalized: String {
+        return prefix(1).capitalized + dropFirst()
     }
 }
 
