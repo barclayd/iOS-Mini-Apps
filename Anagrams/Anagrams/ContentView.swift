@@ -102,6 +102,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 TextField("Enter your word", text: $newWord, onCommit: addNewWord).textFieldStyle(RoundedBorderTextFieldStyle())
+                    .modifier(ClearButton(text: $newWord))
                     .padding()
                 List(usedWords, id: \.self) {
                     Image(systemName: "\($0.count).circle")
@@ -117,6 +118,25 @@ struct ContentView: View {
                 .alert(isPresented: $showError, content: {
                     Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
                 })
+        }
+    }
+}
+
+struct ClearButton: ViewModifier {
+    @Binding var text: String
+    
+    public func body(content: Content) -> some View {
+        ZStack(alignment: .trailing){
+            content
+            if !text.isEmpty {
+                Button(action: {
+                    self.text = ""
+                })
+                {
+                    Image(systemName: "delete.left").foregroundColor(Color(UIColor.opaqueSeparator))
+                }
+                .padding(.trailing, 8)
+            }
         }
     }
 }
