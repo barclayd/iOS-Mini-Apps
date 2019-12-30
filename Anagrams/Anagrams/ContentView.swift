@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var words = [String]()
     @State private var usedWords = [String]()
     @State private var rootWord = ""
     @State private var newWord = ""
@@ -17,8 +18,6 @@ struct ContentView: View {
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showError = false
-    
-    let dogs = ["Nodster", "Tedster", "Rooster"]
     
     func isValidWord(word: String) -> Bool {
         let checker = UITextChecker()
@@ -30,19 +29,23 @@ struct ContentView: View {
     func addNewWord() {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         guard answer.count > 0 else {
-            wordError(title: "No word entered", message: "Please enter a word")
+            displayAlert(title: "No word entered", message: "Please enter a word")
+            return
+        }
+        guard rootWord.lowercased() != answer.lowercased() else {
+            displayAlert(title: "Invalid anagram", message: "Looks like you've just copied the root word. Try and be a little more original next time...")
             return
         }
         guard isValidWord(word: answer) else {
-            wordError(title: "Invalid word entered", message: "Word entered is not a valid word")
+            displayAlert(title: "Invalid word entered", message: "Word entered is not a valid word")
             return
         }
         guard wordNotAlreadyUsed(word: answer) else {
-            wordError(title: "Word already used", message: "Word already exists within the list of entered words")
+            displayAlert(title: "Word already used", message: "Word already exists within the list of entered words")
             return
         }
         guard allLettersExistInWord(word: answer) else {
-            wordError(title: "Invalid word entered", message: "Not all letters of the entered word exist within the root word")
+            displayAlert(title: "Invalid word entered", message: "Not all letters of the entered word exist within the root word")
             return
         }
         usedWords.insert(answer.firstUppercased, at: 0)
@@ -52,10 +55,9 @@ struct ContentView: View {
     func loadWords() {
         if let fileURL = Bundle.main.url(forResource: "words", withExtension: "txt") {
             if let fileContents = try? String(contentsOf: fileURL) {
-                let words = fileContents.components(separatedBy: "\n")
-                let word = words.randomElement()
-                let trimmedWord = word?.trimmingCharacters(in: .whitespacesAndNewlines)
-                rootWord = trimmedWord?.firstUppercased ?? "Applique"
+                words = fileContents.components(separatedBy: "\n")
+                generateNewWord()
+                
             }
             return
         }
@@ -78,10 +80,22 @@ struct ContentView: View {
         return true
     }
     
-    func wordError(title: String, message: String) {
-        errorTitle = "Error! \(title)"
+    func displayAlert(title: String, message: String, error: Bool = true) {
+        errorTitle = error ? "Error! \(title)" : title
         errorMessage = message
         showError = true
+    }
+    
+    func skipWord() {
+        displayAlert(title: "On to the next word!", message: "You got \(usedWords.count) anagrams for \(rootWord). Here's hoping you'll get more for the next word 😉", error: false)
+        generateNewWord()
+    }
+    
+    func generateNewWord() {
+        let word = words.randomElement()
+        let trimmedWord = word?.trimmingCharacters(in: .whitespacesAndNewlines)
+        rootWord = trimmedWord?.firstUppercased ?? "Applique"
+        usedWords.removeAll()
     }
     
     var body: some View {
@@ -96,10 +110,13 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle(rootWord)
-            .onAppear(perform: loadWords)
-            .alert(isPresented: $showError, content: {
-                Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+            .navigationBarItems(trailing: Button(action: skipWord) {
+                Text("Skip")
             })
+                .onAppear(perform: loadWords)
+                .alert(isPresented: $showError, content: {
+                    Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+                })
         }
     }
 }
