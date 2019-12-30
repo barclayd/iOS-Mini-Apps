@@ -13,6 +13,7 @@
 		65D46A6523BA7EC6005D9457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D46A6423BA7EC6005D9457 /* Assets.xcassets */; };
 		65D46A6823BA7EC6005D9457 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D46A6723BA7EC6005D9457 /* Preview Assets.xcassets */; };
 		65D46A6B23BA7EC6005D9457 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D46A6923BA7EC6005D9457 /* LaunchScreen.storyboard */; };
+		65D46A7323BA957F005D9457 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65D46A7223BA957F005D9457 /* words.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		65D46A6723BA7EC6005D9457 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		65D46A6A23BA7EC6005D9457 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65D46A6C23BA7EC6005D9457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65D46A7223BA957F005D9457 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				65D46A6223BA7EC3005D9457 /* ContentView.swift */,
 				65D46A6423BA7EC6005D9457 /* Assets.xcassets */,
 				65D46A6923BA7EC6005D9457 /* LaunchScreen.storyboard */,
+				65D46A7223BA957F005D9457 /* words.txt */,
 				65D46A6C23BA7EC6005D9457 /* Info.plist */,
 				65D46A6623BA7EC6005D9457 /* Preview Content */,
 			);
@@ -135,6 +138,7 @@
 			files = (
 				65D46A6B23BA7EC6005D9457 /* LaunchScreen.storyboard in Resources */,
 				65D46A6823BA7EC6005D9457 /* Preview Assets.xcassets in Resources */,
+				65D46A7323BA957F005D9457 /* words.txt in Resources */,
 				65D46A6523BA7EC6005D9457 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
