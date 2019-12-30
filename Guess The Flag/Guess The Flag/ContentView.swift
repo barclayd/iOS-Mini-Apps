@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var showScore = false
     @State private var score = 0
     @State private var result = ""
-
+    
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
     
@@ -29,15 +29,27 @@ struct ContentView: View {
                 VStack(spacing: 30) {
                     VStack {
                         Text("Tap the flag of").foregroundColor(.white).padding(25)
-                        Text(countries[correctAnswer]).foregroundColor(.green).bold().font(.system(size: 48))
+                        Text(countries[correctAnswer])
+                            .foregroundColor(.green)
+                            .font(.system(size: 48))
+                            .fontWeight(.black)
                     }
                     Spacer()
-                    ForEach(0..<3) {
-                        number in Button(action: {
-                            self.flagTapped(number)
-                        }) {
-                            Image(self.countries[number]).renderingMode(.original)
+                    HStack {
+                        Spacer()
+                        ForEach(0..<3) {
+                            number in Button(action: {
+                                self.flagTapped(number)
+                            }) {
+                                Image(self.countries[number])
+                                    .renderingMode(.original)
+                                    .clipShape(Circle())
+                                    .overlay(Circle().stroke(Color.black, lineWidth: 1))
+                                    .shadow(color: .black, radius: 4)
+                            }
                         }
+                        .padding(-35)
+                        Spacer()
                     }
                     Spacer()
                 }
