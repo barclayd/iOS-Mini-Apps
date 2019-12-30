@@ -9,17 +9,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var billAmount = ""
+    @State private var tipPercentage = 10
+    @State private var splitNumber = 1
+    
+    let tipPercentages = [5, 10, 15, 20, 25, 0]
+    
     var body: some View {
         NavigationView {
             Form {
-                Group {
-                    Text("Hello, World!")
-                        .padding(.top)
+                Section {
+                    TextField("Amount", text: $billAmount)
+                        .foregroundColor(.blue)
+                        .keyboardType(.decimalPad)
                 }
-                Text("Hello, World Again!")
-                    .foregroundColor(Color.red)
+                Section {
+                    Text("£\(billAmount)")
+                }
             }
-            .navigationBarTitle("Split & Tip", displayMode: .inline)
+        .navigationBarTitle("Split & Tip")
         }
     }
 }
