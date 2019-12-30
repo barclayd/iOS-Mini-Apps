@@ -12,7 +12,7 @@ struct ContentView: View {
     
     @State private var sleepAmount = 8.0
     @State private var coffeeAmount = 1
-    @State private var wakeUp = Date()
+    @State private var wakeUp = defaultWakeTime
     
     @State private var showAlert = false
     @State private var suggestedBedTime: String = ""
@@ -25,7 +25,7 @@ struct ContentView: View {
                         Text("Desired amount of sleep").frame(maxWidth: .infinity, alignment: .center).font(.headline)
                         Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
                             Text("\(sleepAmount, specifier: "%g") hours")
-                        }.padding()
+                        }
                     }
                     Section {
                         Text("When would you like to wake up?").frame(maxWidth: .infinity, alignment: .center).font(.headline)
@@ -37,7 +37,7 @@ struct ContentView: View {
                         Text("Daily Coffee Intake").frame(maxWidth: .infinity, alignment: .center).font(.headline)
                         Stepper(value: $coffeeAmount, in: 1...20, step: 1) {
                             Text("\(coffeeAmount) \(coffeeAmount > 1 ? "cups" : "cup")")
-                        }.padding()
+                        }
                     }
                 }
             }
@@ -49,6 +49,13 @@ struct ContentView: View {
         .alert(isPresented: $showAlert) {
             Alert(title: Text("Suggsted Bed Time"), message: Text(suggestedBedTime), dismissButton: .default(Text("OK")))
         }
+    }
+    
+    static var defaultWakeTime: Date {
+        var components = DateComponents()
+        components.hour = 7
+        components.minute = 0
+        return Calendar.current.date(from: components) ?? Date()
     }
     
     func calculateBedTime() {
