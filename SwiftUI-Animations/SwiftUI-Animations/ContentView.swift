@@ -19,10 +19,11 @@ struct ContentView: View {
         .background(Color.red)
         .foregroundColor(.white)
         .clipShape(Circle())
-        .overlay(Circle().stroke(Color.red).scaleEffect(buttonClick).opacity(Double(2 - buttonClick))
+        .overlay(Circle()
+            .stroke(Color.red).scaleEffect(buttonClick).opacity(Double(2 - buttonClick))
             .animation(
                 Animation.easeInOut(duration: 2)
-                    .repeatForever()
+                    .repeatForever(autoreverses: false)
             )
         )
         .onAppear {
