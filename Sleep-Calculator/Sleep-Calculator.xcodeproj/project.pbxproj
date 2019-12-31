@@ -290,14 +290,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Sleep-Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = R2GGK3VN2C;
+				DEVELOPMENT_TEAM = AF6QQ3M554;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Sleep-Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.danielbarclay.Sleep-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dbarclay.Sleep-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,14 +310,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Sleep-Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = R2GGK3VN2C;
+				DEVELOPMENT_TEAM = AF6QQ3M554;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Sleep-Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.danielbarclay.Sleep-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dbarclay.Sleep-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
