@@ -13,6 +13,8 @@
 		65D322F723BBDD500036FCA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D322F623BBDD500036FCA0 /* Assets.xcassets */; };
 		65D322FA23BBDD500036FCA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D322F923BBDD500036FCA0 /* Preview Assets.xcassets */; };
 		65D322FD23BBDD500036FCA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D322FB23BBDD500036FCA0 /* LaunchScreen.storyboard */; };
+		65D3230523BBF3D90036FCA0 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3230423BBF3D90036FCA0 /* SheetView.swift */; };
+		65D3230723BBF6590036FCA0 /* DeleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3230623BBF6590036FCA0 /* DeleteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		65D322F923BBDD500036FCA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		65D322FC23BBDD500036FCA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65D322FE23BBDD500036FCA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65D3230423BBF3D90036FCA0 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		65D3230623BBF6590036FCA0 /* DeleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		65D322E423BBDD4D0036FCA0 = {
 			isa = PBXGroup;
 			children = (
+				65D3230623BBF6590036FCA0 /* DeleteView.swift */,
 				65D322EF23BBDD4D0036FCA0 /* Expense-Tracker */,
 				65D322EE23BBDD4D0036FCA0 /* Products */,
 			);
@@ -63,6 +68,7 @@
 				65D322FB23BBDD500036FCA0 /* LaunchScreen.storyboard */,
 				65D322FE23BBDD500036FCA0 /* Info.plist */,
 				65D322F823BBDD500036FCA0 /* Preview Content */,
+				65D3230423BBF3D90036FCA0 /* SheetView.swift */,
 			);
 			path = "Expense-Tracker";
 			sourceTree = "<group>";
@@ -148,6 +154,8 @@
 			files = (
 				65D322F123BBDD4D0036FCA0 /* AppDelegate.swift in Sources */,
 				65D322F323BBDD4D0036FCA0 /* SceneDelegate.swift in Sources */,
+				65D3230723BBF6590036FCA0 /* DeleteView.swift in Sources */,
+				65D3230523BBF3D90036FCA0 /* SheetView.swift in Sources */,
 				65D322F523BBDD4D0036FCA0 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
