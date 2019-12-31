@@ -15,6 +15,9 @@
 		651C935C23BB67FD00D29267 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651C935A23BB67FD00D29267 /* LaunchScreen.storyboard */; };
 		65D322D723BBA2590036FCA0 /* AnimatedStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D322D623BBA2590036FCA0 /* AnimatedStepperView.swift */; };
 		65D322D923BBA5E30036FCA0 /* AnimationOnStateChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D322D823BBA5E30036FCA0 /* AnimationOnStateChangeView.swift */; };
+		65D322DB23BBAA000036FCA0 /* AnimationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D322DA23BBAA000036FCA0 /* AnimationStackView.swift */; };
+		65D322DD23BBABF60036FCA0 /* AnimatedGesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D322DC23BBABF60036FCA0 /* AnimatedGesturesView.swift */; };
+		65D322DF23BBB1BF0036FCA0 /* CharactersAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D322DE23BBB1BF0036FCA0 /* CharactersAnimatedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		651C935D23BB67FD00D29267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65D322D623BBA2590036FCA0 /* AnimatedStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedStepperView.swift; sourceTree = "<group>"; };
 		65D322D823BBA5E30036FCA0 /* AnimationOnStateChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationOnStateChangeView.swift; sourceTree = "<group>"; };
+		65D322DA23BBAA000036FCA0 /* AnimationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationStackView.swift; sourceTree = "<group>"; };
+		65D322DC23BBABF60036FCA0 /* AnimatedGesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedGesturesView.swift; sourceTree = "<group>"; };
+		65D322DE23BBB1BF0036FCA0 /* CharactersAnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersAnimatedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +74,10 @@
 				651C935D23BB67FD00D29267 /* Info.plist */,
 				651C935723BB67FD00D29267 /* Preview Content */,
 				65D322D623BBA2590036FCA0 /* AnimatedStepperView.swift */,
+				65D322DC23BBABF60036FCA0 /* AnimatedGesturesView.swift */,
 				65D322D823BBA5E30036FCA0 /* AnimationOnStateChangeView.swift */,
+				65D322DA23BBAA000036FCA0 /* AnimationStackView.swift */,
+				65D322DE23BBB1BF0036FCA0 /* CharactersAnimatedView.swift */,
 			);
 			path = "SwiftUI-Animations";
 			sourceTree = "<group>";
@@ -152,9 +161,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D322DB23BBAA000036FCA0 /* AnimationStackView.swift in Sources */,
 				651C935023BB67F900D29267 /* AppDelegate.swift in Sources */,
 				65D322D723BBA2590036FCA0 /* AnimatedStepperView.swift in Sources */,
+				65D322DD23BBABF60036FCA0 /* AnimatedGesturesView.swift in Sources */,
 				65D322D923BBA5E30036FCA0 /* AnimationOnStateChangeView.swift in Sources */,
+				65D322DF23BBB1BF0036FCA0 /* CharactersAnimatedView.swift in Sources */,
 				651C935223BB67F900D29267 /* SceneDelegate.swift in Sources */,
 				651C935423BB67F900D29267 /* ContentView.swift in Sources */,
 			);
