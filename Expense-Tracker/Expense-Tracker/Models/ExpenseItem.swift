@@ -13,7 +13,8 @@ enum ExpenseType {
     case leisure
 }
 
-struct ExpenseItem {
+struct ExpenseItem: Identifiable {
+    var id = UUID()
     var name: String
     var type: ExpenseType
     var cost: Double
