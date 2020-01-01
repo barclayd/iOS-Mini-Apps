@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-enum ExpenseType {
+enum ExpenseType: CaseIterable {
     case business
     case leisure
 }
@@ -17,7 +17,8 @@ struct ExpenseItem: Identifiable {
     var id = UUID()
     var name: String
     var type: ExpenseType
-    var cost: Double
+    var category: String
+    var cost: String
 }
 
 class Expenses: ObservableObject {

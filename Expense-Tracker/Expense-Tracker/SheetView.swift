@@ -11,7 +11,7 @@ import SwiftUI
 struct SecondView: View {
     @Environment(\.presentationMode) var presentationMode
     var name: String
-    
+
     var body: some View {
         VStack {
             Text("Second View Name: \(name)")
@@ -24,7 +24,7 @@ struct SecondView: View {
 
 struct SheetView: View {
     @State private var showSheet = false
-    
+
     var body: some View {
         Button("Show Sheet") {
             self.showSheet.toggle()

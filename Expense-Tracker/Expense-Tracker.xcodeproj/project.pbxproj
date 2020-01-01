@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65160D3923BCCB7C00EBFFE6 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65160D3823BCCB7C00EBFFE6 /* AddView.swift */; };
 		654D525523BCC18B003CB25C /* ArchieveSwiftObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654D525423BCC18B003CB25C /* ArchieveSwiftObjectView.swift */; };
 		654D525723BCC342003CB25C /* ExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654D525623BCC342003CB25C /* ExpenseListView.swift */; };
 		654D525A23BCC371003CB25C /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654D525923BCC371003CB25C /* ExpenseItem.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65160D3823BCCB7C00EBFFE6 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		654D525423BCC18B003CB25C /* ArchieveSwiftObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchieveSwiftObjectView.swift; sourceTree = "<group>"; };
 		654D525623BCC342003CB25C /* ExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListView.swift; sourceTree = "<group>"; };
 		654D525923BCC371003CB25C /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65160D3723BCCAA200EBFFE6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				65160D3823BCCB7C00EBFFE6 /* AddView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		654D525823BCC363003CB25C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +86,7 @@
 		65D322EF23BBDD4D0036FCA0 /* Expense-Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				65160D3723BCCAA200EBFFE6 /* Views */,
 				654D525823BCC363003CB25C /* Models */,
 				65D322F023BBDD4D0036FCA0 /* AppDelegate.swift */,
 				65D322F223BBDD4D0036FCA0 /* SceneDelegate.swift */,
@@ -174,6 +185,7 @@
 			files = (
 				65D322F123BBDD4D0036FCA0 /* AppDelegate.swift in Sources */,
 				65D322F323BBDD4D0036FCA0 /* SceneDelegate.swift in Sources */,
+				65160D3923BCCB7C00EBFFE6 /* AddView.swift in Sources */,
 				65D3230723BBF6590036FCA0 /* DeleteView.swift in Sources */,
 				65D3230923BBF8E10036FCA0 /* UserDefaultsView.swift in Sources */,
 				654D525A23BCC371003CB25C /* ExpenseItem.swift in Sources */,

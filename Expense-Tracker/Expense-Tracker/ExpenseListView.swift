@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ExpenseListView: View {
     @ObservedObject var expenses = Expenses()
+    @State private var showAddView = false
 
     var body: some View {
         NavigationView {
@@ -21,12 +22,14 @@ struct ExpenseListView: View {
             }
             .navigationBarTitle("Expense Tracker")
             .navigationBarItems(trailing: Button(action: {
-                let expense = ExpenseItem(name: "Test", type: .leisure, cost: 15)
-                self.expenses.items.append(expense)
+                self.showAddView.toggle()
             }) {
                 Image(systemName: "plus.circle.fill")
                     .foregroundColor(.black)
             })
+            .sheet(isPresented: $showAddView) {
+                AddView(expenses: self.expenses)
+            }
         }
     }
 
