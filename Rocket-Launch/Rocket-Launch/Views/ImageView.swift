@@ -11,7 +11,7 @@ import SwiftUI
 struct ImageView: View {
     var body: some View {
         VStack {
-            GeometryReader { geo in Image("spacex").resizable().aspectRatio(contentMode: .fit).frame(width: geo.size.width)
+            GeometryReader { geo in Image("spacex").resizable().scaledToFit().frame(width: geo.size.width)
             }
         }
     }
