@@ -22,7 +22,7 @@ struct ExpenseListView: View {
             }
             .navigationBarTitle("Expense Tracker")
             .navigationBarItems(trailing: Button(action: {
-                self.showAddView.toggle()
+                self.showAddView = true
             }) {
                 Image(systemName: "plus.circle.fill")
                     .foregroundColor(.black)

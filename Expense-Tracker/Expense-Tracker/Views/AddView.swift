@@ -9,15 +9,16 @@
 import SwiftUI
 
 struct AddView: View {
-    
     @ObservedObject var expenses: Expenses
-    
+
+    @Environment(\.presentationMode) var presentationMode
+
     @State private var name = ""
-    @State private var type = ExpenseType.leisure
+    @State private var type = ""
     @State private var category = ""
     @State private var amount = ""
 
-    static let categoryTypes = ["Personal", "work"]
+    static let categoryTypes = ["Personal", "Work"]
 
     var body: some View {
         NavigationView {
@@ -31,8 +32,15 @@ struct AddView: View {
                 TextField("Amount", text: $amount)
                     .keyboardType(.decimalPad)
             }
+            .navigationBarTitle("Add New Expense")
+            .navigationBarItems(trailing: Button("Save") {
+                if let actualAmount = Int(self.amount) {
+                    let item = ExpenseItem(name: self.name, category: self.category, cost: actualAmount)
+                    self.expenses.items.append(item)
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+            })
         }
-        .navigationBarTitle("Add New Expense")
     }
 }
 
