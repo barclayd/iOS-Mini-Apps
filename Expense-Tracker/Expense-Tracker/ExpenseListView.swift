@@ -16,12 +16,21 @@ struct ExpenseListView: View {
         NavigationView {
             List {
                 ForEach(expenses.items) { item in
-                    Text(item.name)
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(item.name).font(.headline)
+                            Text(item.category)
+                        }
+                        Spacer()
+                        Text("£\(item.cost)")
+                    }
                 }
                 .onDelete(perform: removeItems)
             }
             .navigationBarTitle("Expense Tracker")
-            .navigationBarItems(trailing: Button(action: {
+            .navigationBarItems(
+                leading: EditButton(), trailing: Button(action: {
+                print(self.showAddView)
                 self.showAddView = true
             }) {
                 Image(systemName: "plus.circle.fill")

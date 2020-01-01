@@ -24,7 +24,7 @@ struct AddView: View {
         NavigationView {
             Form {
                 TextField("Name", text: $name)
-                Picker("Type", selection: $type) {
+                Picker("Type", selection: $category) {
                     ForEach(Self.categoryTypes, id: \.self) {
                         Text($0)
                     }
