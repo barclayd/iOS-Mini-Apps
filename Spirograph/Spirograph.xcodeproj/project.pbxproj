@@ -21,6 +21,8 @@
 		AC87453223BE22A100DD27CE /* ColourCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87453123BE22A100DD27CE /* ColourCycleView.swift */; };
 		AC87453423BE274100DD27CE /* SpecialEffectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87453323BE274100DD27CE /* SpecialEffectsView.swift */; };
 		AC87453623BE2AD300DD27CE /* SaturateBlurEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87453523BE2AD300DD27CE /* SaturateBlurEffectView.swift */; };
+		AC87453823BE2C6700DD27CE /* AnimatedShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87453723BE2C6700DD27CE /* AnimatedShapesView.swift */; };
+		AC87453A23BE42F300DD27CE /* AnimatablePairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87453923BE42F300DD27CE /* AnimatablePairView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		AC87453123BE22A100DD27CE /* ColourCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourCycleView.swift; sourceTree = "<group>"; };
 		AC87453323BE274100DD27CE /* SpecialEffectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialEffectsView.swift; sourceTree = "<group>"; };
 		AC87453523BE2AD300DD27CE /* SaturateBlurEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturateBlurEffectView.swift; sourceTree = "<group>"; };
+		AC87453723BE2C6700DD27CE /* AnimatedShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedShapesView.swift; sourceTree = "<group>"; };
+		AC87453923BE42F300DD27CE /* AnimatablePairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePairView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				AC87453123BE22A100DD27CE /* ColourCycleView.swift */,
 				AC87453323BE274100DD27CE /* SpecialEffectsView.swift */,
 				AC87453523BE2AD300DD27CE /* SaturateBlurEffectView.swift */,
+				AC87453723BE2C6700DD27CE /* AnimatedShapesView.swift */,
+				AC87453923BE42F300DD27CE /* AnimatablePairView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,11 +185,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC87452E23BE11EA00DD27CE /* TransformShapeView.swift in Sources */,
+				AC87453823BE2C6700DD27CE /* AnimatedShapesView.swift in Sources */,
 				AC87453623BE2AD300DD27CE /* SaturateBlurEffectView.swift in Sources */,
 				AC87452A23BE02F300DD27CE /* ShapeView.swift in Sources */,
 				AC87451323BDFE7D00DD27CE /* AppDelegate.swift in Sources */,
 				AC87452C23BE0DA900DD27CE /* InsettableShapeView.swift in Sources */,
 				AC87453223BE22A100DD27CE /* ColourCycleView.swift in Sources */,
+				AC87453A23BE42F300DD27CE /* AnimatablePairView.swift in Sources */,
 				AC87453023BE179D00DD27CE /* ImagePaintView.swift in Sources */,
 				AC87451523BDFE7D00DD27CE /* SceneDelegate.swift in Sources */,
 				AC87453423BE274100DD27CE /* SpecialEffectsView.swift in Sources */,
