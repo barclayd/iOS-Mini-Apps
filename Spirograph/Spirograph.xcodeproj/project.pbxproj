@@ -14,6 +14,7 @@
 		AC87451C23BDFE7E00DD27CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC87451B23BDFE7E00DD27CE /* Preview Assets.xcassets */; };
 		AC87451F23BDFE7E00DD27CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC87451D23BDFE7E00DD27CE /* LaunchScreen.storyboard */; };
 		AC87452823BDFE9C00DD27CE /* CustomPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87452723BDFE9C00DD27CE /* CustomPathView.swift */; };
+		AC87452A23BE02F300DD27CE /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87452923BE02F300DD27CE /* ShapeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AC87451E23BDFE7E00DD27CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC87452023BDFE7E00DD27CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC87452723BDFE9C00DD27CE /* CustomPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPathView.swift; sourceTree = "<group>"; };
+		AC87452923BE02F300DD27CE /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				AC87452723BDFE9C00DD27CE /* CustomPathView.swift */,
+				AC87452923BE02F300DD27CE /* ShapeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC87452A23BE02F300DD27CE /* ShapeView.swift in Sources */,
 				AC87451323BDFE7D00DD27CE /* AppDelegate.swift in Sources */,
 				AC87451523BDFE7D00DD27CE /* SceneDelegate.swift in Sources */,
 				AC87452823BDFE9C00DD27CE /* CustomPathView.swift in Sources */,
