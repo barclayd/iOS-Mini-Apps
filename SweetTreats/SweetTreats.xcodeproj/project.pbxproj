@@ -14,6 +14,11 @@
 		AC42E02E23BE612900ABB43D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC42E02D23BE612900ABB43D /* Preview Assets.xcassets */; };
 		AC42E03123BE612900ABB43D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC42E02F23BE612900ABB43D /* LaunchScreen.storyboard */; };
 		AC42E03A23BE693000ABB43D /* URLSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC42E03923BE693000ABB43D /* URLSessionView.swift */; };
+		AC42E03C23BE8B8100ABB43D /* ValidateDisableFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC42E03B23BE8B8100ABB43D /* ValidateDisableFormView.swift */; };
+		AC42E03E23BE8EEB00ABB43D /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC42E03D23BE8EEB00ABB43D /* OrderView.swift */; };
+		AC42E04123BE8F0900ABB43D /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC42E04023BE8F0900ABB43D /* Order.swift */; };
+		AC42E04323BE95A600ABB43D /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC42E04223BE95A600ABB43D /* AddressView.swift */; };
+		AC42E04523BE96A500ABB43D /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC42E04423BE96A500ABB43D /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		AC42E03023BE612900ABB43D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC42E03223BE612900ABB43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC42E03923BE693000ABB43D /* URLSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionView.swift; sourceTree = "<group>"; };
+		AC42E03B23BE8B8100ABB43D /* ValidateDisableFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateDisableFormView.swift; sourceTree = "<group>"; };
+		AC42E03D23BE8EEB00ABB43D /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		AC42E04023BE8F0900ABB43D /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		AC42E04223BE95A600ABB43D /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		AC42E04423BE96A500ABB43D /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 		AC42E02323BE612800ABB43D /* SweetTreats */ = {
 			isa = PBXGroup;
 			children = (
+				AC42E03F23BE8EF500ABB43D /* Models */,
 				AC42E03823BE691D00ABB43D /* Views */,
 				AC42E02423BE612800ABB43D /* AppDelegate.swift */,
 				AC42E02623BE612800ABB43D /* SceneDelegate.swift */,
@@ -82,8 +93,20 @@
 			children = (
 				AC42E02823BE612800ABB43D /* CodableConformance.swift */,
 				AC42E03923BE693000ABB43D /* URLSessionView.swift */,
+				AC42E03B23BE8B8100ABB43D /* ValidateDisableFormView.swift */,
+				AC42E03D23BE8EEB00ABB43D /* OrderView.swift */,
+				AC42E04223BE95A600ABB43D /* AddressView.swift */,
+				AC42E04423BE96A500ABB43D /* CheckoutView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AC42E03F23BE8EF500ABB43D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC42E04023BE8F0900ABB43D /* Order.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,10 +180,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC42E03C23BE8B8100ABB43D /* ValidateDisableFormView.swift in Sources */,
 				AC42E02523BE612800ABB43D /* AppDelegate.swift in Sources */,
 				AC42E03A23BE693000ABB43D /* URLSessionView.swift in Sources */,
+				AC42E03E23BE8EEB00ABB43D /* OrderView.swift in Sources */,
 				AC42E02723BE612800ABB43D /* SceneDelegate.swift in Sources */,
+				AC42E04323BE95A600ABB43D /* AddressView.swift in Sources */,
 				AC42E02923BE612800ABB43D /* CodableConformance.swift in Sources */,
+				AC42E04123BE8F0900ABB43D /* Order.swift in Sources */,
+				AC42E04523BE96A500ABB43D /* CheckoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
