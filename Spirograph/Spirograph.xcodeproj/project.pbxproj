@@ -17,6 +17,10 @@
 		AC87452A23BE02F300DD27CE /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87452923BE02F300DD27CE /* ShapeView.swift */; };
 		AC87452C23BE0DA900DD27CE /* InsettableShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87452B23BE0DA900DD27CE /* InsettableShapeView.swift */; };
 		AC87452E23BE11EA00DD27CE /* TransformShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87452D23BE11EA00DD27CE /* TransformShapeView.swift */; };
+		AC87453023BE179D00DD27CE /* ImagePaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87452F23BE179D00DD27CE /* ImagePaintView.swift */; };
+		AC87453223BE22A100DD27CE /* ColourCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87453123BE22A100DD27CE /* ColourCycleView.swift */; };
+		AC87453423BE274100DD27CE /* SpecialEffectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87453323BE274100DD27CE /* SpecialEffectsView.swift */; };
+		AC87453623BE2AD300DD27CE /* SaturateBlurEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87453523BE2AD300DD27CE /* SaturateBlurEffectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		AC87452923BE02F300DD27CE /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
 		AC87452B23BE0DA900DD27CE /* InsettableShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsettableShapeView.swift; sourceTree = "<group>"; };
 		AC87452D23BE11EA00DD27CE /* TransformShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformShapeView.swift; sourceTree = "<group>"; };
+		AC87452F23BE179D00DD27CE /* ImagePaintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePaintView.swift; sourceTree = "<group>"; };
+		AC87453123BE22A100DD27CE /* ColourCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourCycleView.swift; sourceTree = "<group>"; };
+		AC87453323BE274100DD27CE /* SpecialEffectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialEffectsView.swift; sourceTree = "<group>"; };
+		AC87453523BE2AD300DD27CE /* SaturateBlurEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturateBlurEffectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,10 @@
 				AC87452923BE02F300DD27CE /* ShapeView.swift */,
 				AC87452B23BE0DA900DD27CE /* InsettableShapeView.swift */,
 				AC87452D23BE11EA00DD27CE /* TransformShapeView.swift */,
+				AC87452F23BE179D00DD27CE /* ImagePaintView.swift */,
+				AC87453123BE22A100DD27CE /* ColourCycleView.swift */,
+				AC87453323BE274100DD27CE /* SpecialEffectsView.swift */,
+				AC87453523BE2AD300DD27CE /* SaturateBlurEffectView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,10 +179,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC87452E23BE11EA00DD27CE /* TransformShapeView.swift in Sources */,
+				AC87453623BE2AD300DD27CE /* SaturateBlurEffectView.swift in Sources */,
 				AC87452A23BE02F300DD27CE /* ShapeView.swift in Sources */,
 				AC87451323BDFE7D00DD27CE /* AppDelegate.swift in Sources */,
 				AC87452C23BE0DA900DD27CE /* InsettableShapeView.swift in Sources */,
+				AC87453223BE22A100DD27CE /* ColourCycleView.swift in Sources */,
+				AC87453023BE179D00DD27CE /* ImagePaintView.swift in Sources */,
 				AC87451523BDFE7D00DD27CE /* SceneDelegate.swift in Sources */,
+				AC87453423BE274100DD27CE /* SpecialEffectsView.swift in Sources */,
 				AC87452823BDFE9C00DD27CE /* CustomPathView.swift in Sources */,
 				AC87451723BDFE7D00DD27CE /* ContentView.swift in Sources */,
 			);
