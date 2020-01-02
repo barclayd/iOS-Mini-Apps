@@ -9,11 +9,24 @@
 import SwiftUI
 
 struct CheckoutView: View {
-    
     @ObservedObject var order: Order
-    
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { geo in
+            ScrollView {
+                VStack {
+                    Image("ice1")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: geo.size.height)
+
+                    Text("Your total order cost: £\(self.order.cost, specifier: "%.2f")")
+                        .font(.title)
+
+                    Button("Place Order") {}.padding()
+                }
+            }
+        }.navigationBarTitle("Checkout")
     }
 }
 

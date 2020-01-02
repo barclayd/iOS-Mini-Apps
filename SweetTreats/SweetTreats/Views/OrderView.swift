@@ -29,7 +29,7 @@ struct OrderView: View {
                         Text("Any special requests?")
                     }
                     if order.specialRequestEnabled {
-                        Toggle(isOn: $order.topings) {
+                        Toggle(isOn: $order.toppings) {
                             Text("Add extra toppings")
                         }
                         Toggle(isOn: $order.sauce) {
