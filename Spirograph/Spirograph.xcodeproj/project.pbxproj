@@ -15,6 +15,8 @@
 		AC87451F23BDFE7E00DD27CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC87451D23BDFE7E00DD27CE /* LaunchScreen.storyboard */; };
 		AC87452823BDFE9C00DD27CE /* CustomPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87452723BDFE9C00DD27CE /* CustomPathView.swift */; };
 		AC87452A23BE02F300DD27CE /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87452923BE02F300DD27CE /* ShapeView.swift */; };
+		AC87452C23BE0DA900DD27CE /* InsettableShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87452B23BE0DA900DD27CE /* InsettableShapeView.swift */; };
+		AC87452E23BE11EA00DD27CE /* TransformShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87452D23BE11EA00DD27CE /* TransformShapeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		AC87452023BDFE7E00DD27CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC87452723BDFE9C00DD27CE /* CustomPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPathView.swift; sourceTree = "<group>"; };
 		AC87452923BE02F300DD27CE /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
+		AC87452B23BE0DA900DD27CE /* InsettableShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsettableShapeView.swift; sourceTree = "<group>"; };
+		AC87452D23BE11EA00DD27CE /* TransformShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformShapeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 			children = (
 				AC87452723BDFE9C00DD27CE /* CustomPathView.swift */,
 				AC87452923BE02F300DD27CE /* ShapeView.swift */,
+				AC87452B23BE0DA900DD27CE /* InsettableShapeView.swift */,
+				AC87452D23BE11EA00DD27CE /* TransformShapeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,8 +166,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC87452E23BE11EA00DD27CE /* TransformShapeView.swift in Sources */,
 				AC87452A23BE02F300DD27CE /* ShapeView.swift in Sources */,
 				AC87451323BDFE7D00DD27CE /* AppDelegate.swift in Sources */,
+				AC87452C23BE0DA900DD27CE /* InsettableShapeView.swift in Sources */,
 				AC87451523BDFE7D00DD27CE /* SceneDelegate.swift in Sources */,
 				AC87452823BDFE9C00DD27CE /* CustomPathView.swift in Sources */,
 				AC87451723BDFE7D00DD27CE /* ContentView.swift in Sources */,
