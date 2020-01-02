@@ -23,6 +23,8 @@
 		AC87453623BE2AD300DD27CE /* SaturateBlurEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87453523BE2AD300DD27CE /* SaturateBlurEffectView.swift */; };
 		AC87453823BE2C6700DD27CE /* AnimatedShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87453723BE2C6700DD27CE /* AnimatedShapesView.swift */; };
 		AC87453A23BE42F300DD27CE /* AnimatablePairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87453923BE42F300DD27CE /* AnimatablePairView.swift */; };
+		AC87453C23BE520A00DD27CE /* SpirographView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87453B23BE520A00DD27CE /* SpirographView.swift */; };
+		AC87453F23BE528300DD27CE /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87453E23BE528300DD27CE /* Drawing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		AC87453523BE2AD300DD27CE /* SaturateBlurEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturateBlurEffectView.swift; sourceTree = "<group>"; };
 		AC87453723BE2C6700DD27CE /* AnimatedShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedShapesView.swift; sourceTree = "<group>"; };
 		AC87453923BE42F300DD27CE /* AnimatablePairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePairView.swift; sourceTree = "<group>"; };
+		AC87453B23BE520A00DD27CE /* SpirographView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpirographView.swift; sourceTree = "<group>"; };
+		AC87453E23BE528300DD27CE /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 		AC87451123BDFE7D00DD27CE /* Spirograph */ = {
 			isa = PBXGroup;
 			children = (
+				AC87453D23BE527500DD27CE /* Helpers */,
 				AC87452623BDFE9000DD27CE /* Views */,
 				AC87451223BDFE7D00DD27CE /* AppDelegate.swift */,
 				AC87451423BDFE7D00DD27CE /* SceneDelegate.swift */,
@@ -109,8 +114,17 @@
 				AC87453523BE2AD300DD27CE /* SaturateBlurEffectView.swift */,
 				AC87453723BE2C6700DD27CE /* AnimatedShapesView.swift */,
 				AC87453923BE42F300DD27CE /* AnimatablePairView.swift */,
+				AC87453B23BE520A00DD27CE /* SpirographView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AC87453D23BE527500DD27CE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AC87453E23BE528300DD27CE /* Drawing.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,12 +205,14 @@
 				AC87451323BDFE7D00DD27CE /* AppDelegate.swift in Sources */,
 				AC87452C23BE0DA900DD27CE /* InsettableShapeView.swift in Sources */,
 				AC87453223BE22A100DD27CE /* ColourCycleView.swift in Sources */,
+				AC87453C23BE520A00DD27CE /* SpirographView.swift in Sources */,
 				AC87453A23BE42F300DD27CE /* AnimatablePairView.swift in Sources */,
 				AC87453023BE179D00DD27CE /* ImagePaintView.swift in Sources */,
 				AC87451523BDFE7D00DD27CE /* SceneDelegate.swift in Sources */,
 				AC87453423BE274100DD27CE /* SpecialEffectsView.swift in Sources */,
 				AC87452823BDFE9C00DD27CE /* CustomPathView.swift in Sources */,
 				AC87451723BDFE7D00DD27CE /* ContentView.swift in Sources */,
+				AC87453F23BE528300DD27CE /* Drawing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
