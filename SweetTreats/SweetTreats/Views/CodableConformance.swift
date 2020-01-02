@@ -26,7 +26,7 @@ class User: ObservableObject, Codable {
     }
 }
 
-struct CodabelConformanceView: View {
+struct CodableConformance: View {
     var body: some View {
         Text("Hello, World!")
     }
@@ -34,6 +34,6 @@ struct CodabelConformanceView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        CodabelConformanceView()
+        CodableConformance()
     }
 }
