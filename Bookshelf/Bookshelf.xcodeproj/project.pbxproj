@@ -19,6 +19,7 @@
 		AC92F24C23BF5AEE001C0DE1 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92F24B23BF5AEE001C0DE1 /* BookListView.swift */; };
 		AC92F24E23BF617C001C0DE1 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92F24D23BF617C001C0DE1 /* RatingView.swift */; };
 		AC92F25023BF65AB001C0DE1 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92F24F23BF65AB001C0DE1 /* EmojiRatingView.swift */; };
+		AC92F25223BF6B9A001C0DE1 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92F25123BF6B9A001C0DE1 /* BookDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		AC92F24B23BF5AEE001C0DE1 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
 		AC92F24D23BF617C001C0DE1 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		AC92F24F23BF65AB001C0DE1 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
+		AC92F25123BF6B9A001C0DE1 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				AC92F24B23BF5AEE001C0DE1 /* BookListView.swift */,
 				AC92F24D23BF617C001C0DE1 /* RatingView.swift */,
 				AC92F24F23BF65AB001C0DE1 /* EmojiRatingView.swift */,
+				AC92F25123BF6B9A001C0DE1 /* BookDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			files = (
 				AC92F24A23BF55F7001C0DE1 /* AddBookView.swift in Sources */,
 				AC92F25023BF65AB001C0DE1 /* EmojiRatingView.swift in Sources */,
+				AC92F25223BF6B9A001C0DE1 /* BookDetailView.swift in Sources */,
 				AC92F24623BF3D7E001C0DE1 /* SizeClassesView.swift in Sources */,
 				AC92F23323BF336A001C0DE1 /* Bookshelf.xcdatamodeld in Sources */,
 				AC92F22E23BF336A001C0DE1 /* AppDelegate.swift in Sources */,
