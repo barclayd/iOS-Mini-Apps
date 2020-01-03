@@ -18,6 +18,7 @@ struct BookListView: View {
         NavigationView {
             VStack(alignment: .trailing) {
                 Text("Number of Books: \(books.count)")
+                    .padding()
                     .navigationBarTitle("Bookshelf")
                     .navigationBarItems(trailing: Button(action: {
                         self.showAddBookScreen.toggle()
@@ -26,10 +27,10 @@ struct BookListView: View {
                     })
                     .sheet(isPresented: $showAddBookScreen) {
                         AddBookView().environment(\.managedObjectContext, self.moc)
-                }.padding()
+                    }
                 List {
                     ForEach(books, id: \.self) { book in
-                        NavigationLink(destination: Text(book.title ?? "Unknown Title")) {
+                        NavigationLink(destination: BookDetailView(book: book)) {
                             EmojiRatingView(rating: book.rating)
                                 .font(.largeTitle)
 
