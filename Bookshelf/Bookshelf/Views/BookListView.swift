@@ -10,9 +10,17 @@ import SwiftUI
 
 struct BookListView: View {
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Book.entity(), sortDescriptors: []) var books: FetchedResults<Book>
+    @FetchRequest(entity: Book.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Book.title, ascending: true), NSSortDescriptor(keyPath: \Book.rating, ascending: false)]) var books: FetchedResults<Book>
 
     @State private var showAddBookScreen = false
+
+    func deleteBooks(at offsets: IndexSet) {
+        for offset in offsets {
+            let book = books[offset]
+            moc.delete(book)
+        }
+        try? moc.save()
+    }
 
     var body: some View {
         NavigationView {
@@ -20,7 +28,7 @@ struct BookListView: View {
                 Text("Number of Books: \(books.count)")
                     .padding()
                     .navigationBarTitle("Bookshelf")
-                    .navigationBarItems(trailing: Button(action: {
+                    .navigationBarItems(leading: EditButton(), trailing: Button(action: {
                         self.showAddBookScreen.toggle()
                     }) {
                         Image(systemName: "plus")
@@ -40,6 +48,7 @@ struct BookListView: View {
                             }
                         }
                     }
+                    .onDelete(perform: deleteBooks)
                 }
             }
         }
