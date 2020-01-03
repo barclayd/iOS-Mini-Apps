@@ -27,7 +27,7 @@ struct PushButton: View {
     }
 }
 
-struct ContentView: View {
+struct ButtonToggleView: View {
     @State private var rememberMe = false
 
     var body: some View {
@@ -38,8 +38,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ButtonToggleView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ButtonToggleView()
     }
 }

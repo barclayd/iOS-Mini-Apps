@@ -16,16 +16,31 @@ struct BookListView: View {
 
     var body: some View {
         NavigationView {
-            Text("Number of Books: \(books.count)")
-                .navigationBarTitle("Bookshelf")
-                .navigationBarItems(trailing: Button(action: {
-                    self.showAddBookScreen.toggle()
-                }) {
-                    Image(systemName: "plus")
-                })
-                .sheet(isPresented: $showAddBookScreen) {
-                    AddBookView().environment(\.managedObjectContext, self.moc)
+            VStack(alignment: .trailing) {
+                Text("Number of Books: \(books.count)")
+                    .navigationBarTitle("Bookshelf")
+                    .navigationBarItems(trailing: Button(action: {
+                        self.showAddBookScreen.toggle()
+                    }) {
+                        Image(systemName: "plus")
+                    })
+                    .sheet(isPresented: $showAddBookScreen) {
+                        AddBookView().environment(\.managedObjectContext, self.moc)
+                }.padding()
+                List {
+                    ForEach(books, id: \.self) { book in
+                        NavigationLink(destination: Text(book.title ?? "Unknown Title")) {
+                            EmojiRatingView(rating: book.rating)
+                                .font(.largeTitle)
+
+                            VStack(alignment: .leading) {
+                                Text(book.title ?? "Unknown Title").font(.headline)
+                                Text(book.author ?? "Unknown Author").foregroundColor(.secondary)
+                            }
+                        }
+                    }
                 }
+            }
         }
     }
 }
