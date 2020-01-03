@@ -15,7 +15,8 @@
 		AC92F23A23BF336B001C0DE1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC92F23923BF336B001C0DE1 /* Preview Assets.xcassets */; };
 		AC92F23D23BF336B001C0DE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC92F23B23BF336B001C0DE1 /* LaunchScreen.storyboard */; };
 		AC92F24623BF3D7E001C0DE1 /* SizeClassesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92F24523BF3D7E001C0DE1 /* SizeClassesView.swift */; };
-		AC92F24823BF4736001C0DE1 /* StudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92F24723BF4736001C0DE1 /* StudentView.swift */; };
+		AC92F24A23BF55F7001C0DE1 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92F24923BF55F7001C0DE1 /* AddBookView.swift */; };
+		AC92F24C23BF5AEE001C0DE1 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92F24B23BF5AEE001C0DE1 /* BookListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +30,8 @@
 		AC92F23C23BF336B001C0DE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC92F23E23BF336B001C0DE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC92F24523BF3D7E001C0DE1 /* SizeClassesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeClassesView.swift; sourceTree = "<group>"; };
-		AC92F24723BF4736001C0DE1 /* StudentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentView.swift; sourceTree = "<group>"; };
+		AC92F24923BF55F7001C0DE1 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		AC92F24B23BF5AEE001C0DE1 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,8 @@
 			children = (
 				AC92F23423BF336A001C0DE1 /* ContentView.swift */,
 				AC92F24523BF3D7E001C0DE1 /* SizeClassesView.swift */,
-				AC92F24723BF4736001C0DE1 /* StudentView.swift */,
+				AC92F24923BF55F7001C0DE1 /* AddBookView.swift */,
+				AC92F24B23BF5AEE001C0DE1 /* BookListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,12 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC92F24A23BF55F7001C0DE1 /* AddBookView.swift in Sources */,
 				AC92F24623BF3D7E001C0DE1 /* SizeClassesView.swift in Sources */,
 				AC92F23323BF336A001C0DE1 /* Bookshelf.xcdatamodeld in Sources */,
 				AC92F22E23BF336A001C0DE1 /* AppDelegate.swift in Sources */,
 				AC92F23523BF336A001C0DE1 /* ContentView.swift in Sources */,
-				AC92F24823BF4736001C0DE1 /* StudentView.swift in Sources */,
 				AC92F23023BF336A001C0DE1 /* SceneDelegate.swift in Sources */,
+				AC92F24C23BF5AEE001C0DE1 /* BookListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
